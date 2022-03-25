@@ -32,5 +32,15 @@ export const runs = [
         calories: "449",
         rating: "N/A"
     },
-
+    {
+        id: 4,
+        date: "3/24/22",
+        time: "19:11",
+        distance: "2.01 mi",
+        avgPace: "9:32",
+        bestPace: "8:07",
+        avgHeartRate: "168 bpm",
+        calories: "272",
+        rating: "6/10"
+    },
 ]

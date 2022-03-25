@@ -1,9 +1,12 @@
 import './App.css';
-import RunEntry from './components/RunEntry';
 import RunLog from './components/RunLog';
+import Header from './layout/Header';
 
 export default function App() {
   return (
-    <RunLog />
+    <main>
+      <Header />
+      <RunLog />
+    </main>
   )
 }
