@@ -21,6 +21,7 @@ This is a personal project, designed to hold information on my runs. Currently, 
 
 - 3/23/2022 - Basic table and initial runs added
 - 3/24/2022 - Basic Header added
+- 3/28/2022 - migrated data to custom API and handled fetch requests
 
 ## Contact
 
