@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import RunEntry from "./RunEntry";
 
 function RunLog() {
+
+    const [runs, setRuns] = useState([]);
+
+    useEffect(() => {
+        console.log("useEffect");
+        async function loadRuns() {
+            const response = await fetch(
+                'http://localhost:5000/runs'
+            );
+            const runsFromAPI = await response.json();
+            console.log("setRuns", runsFromAPI);
+            setRuns(runsFromAPI.data);
+        }
+        loadRuns();
+    }, []);
+
     return (
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -30,7 +46,7 @@ function RunLog() {
                         </th>
                     </tr>
                 </thead>
-                <RunEntry />
+                <RunEntry runs={runs}/>
             </table>
         </div>
     )
